@@ -1,6 +1,7 @@
-import React from 'react';
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { socialLinks } from '../Data';
+import { FiChevronsUp } from "react-icons/fi";
 
 const List = styled.ul`
   display: flex;
@@ -9,36 +10,40 @@ const List = styled.ul`
   list-style-type: none;
 `
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: #123C69;
-`;
+const Button = styled.div`
+  position: fixed; 
+   width: 100%;
+   left: 50%;
+   bottom: 40px;
+   height: 20px;
+   font-size: 3rem;
+   z-index: 1;
+   cursor: pointer;
+   color: #AC3B61;  
+`
 
+export default function Footer() {
+  const [visible, setVisible] = useState(false)
 
-function Footer() {
-  const socialLinks = [
-    {
-      "name":"linkedin",
-      "url":"https://www.linkedin.com/in/hongjrichard/",
-      "className": "faLinkedIn",
-      "key": "linkedin-social",
-      "icon": FaLinkedin 
-    },
-    {
-      "name":"github",
-      "url":"https://github.com/richardjhong",
-      "className": "faGithub",
-      "key": "github-social",
-      "icon": FaGithub
-    },
-  ]
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    scrolled > 300 ? setVisible(true) : setVisible(false)
+  }
+
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+    });
+  };
+ 
+  window.addEventListener('scroll', toggleVisible);
+
 
   return (
     <footer>
-    <Title>
-      Contact
-    </Title>
     <div className="row">
       <List>   
         {
@@ -54,10 +59,14 @@ function Footer() {
           })
         }
       </List>
-      <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#about"><i className="icon-up-open" /></a></div>
+      <Button>
+      <FiChevronsUp 
+        onClick={scrollToTop} 
+        style={{display: visible ? 'inline' : 'none'}} 
+      />
+      </Button>
     </div>
   </footer>
   );
 }
 
-export default Footer;

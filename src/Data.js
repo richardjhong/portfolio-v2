@@ -1,5 +1,6 @@
 import { SiExpress, SiNodedotjs, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql } from "react-icons/si";
 import { GrCli } from "react-icons/gr";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const slider = [
   {
@@ -178,3 +179,20 @@ export const projects = [
     ]
   },
 ];
+
+export const socialLinks = [
+  {
+    "name":"linkedin",
+    "url":"https://www.linkedin.com/in/hongjrichard/",
+    "className": "faLinkedIn",
+    "key": "linkedin-social",
+    "icon": FaLinkedin 
+  },
+  {
+    "name":"github",
+    "url":"https://github.com/richardjhong",
+    "className": "faGithub",
+    "key": "github-social",
+    "icon": FaGithub
+  },
+]

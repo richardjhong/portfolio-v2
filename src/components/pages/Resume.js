@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import resumePDF from '../../assets/resume.pdf'
-import { Document, Page, pdfjs } from 'react-pdf';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 
 export default function Resume() {
   const [numPages, setNumPages] = useState(null);
@@ -18,12 +17,11 @@ export default function Resume() {
           Download CV
         </button>
       </a>
-      <Document file={resumePDF} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <p>
-        Page {pageNumber} of {numPages}
-      </p>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
+        <Document file={resumePDF} onLoadSuccess={onDocumentLoadSuccess} renderMode={"canvas"}>
+          <Page pageNumber={pageNumber} />
+        </Document>
+      </div>
     </div>
   );
 }

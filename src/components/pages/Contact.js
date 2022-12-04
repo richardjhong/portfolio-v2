@@ -1,22 +1,103 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { validateEmail } from '../../utils/helpers';
 
 export default function Contact() {
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [message, setMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState('');
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseOver = (e) => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = (e) => {
+    setIsHovering(false);
+    if (e.target.name === 'name' && name === '') {
+      setErrorMessage('Name field cannot be empty.')
+    }
+
+    if (e.target.name === 'email' && email === '') {
+      setErrorMessage('Email field cannot be empty.')
+    }
+
+    if (e.target.name === 'message' && message === '') {
+      setErrorMessage('Message field cannot be empty.')
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+
+    if (inputType === 'email') {
+      setEmail(inputValue);
+    } else if (inputType === 'name') {
+      setName(inputValue);
+    } else {
+      setMessage(inputValue);
+    }
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    if (!validateEmail(email)) {
+      setErrorMessage('Email is invalid');
+      return;
+    }
+
+    setEmail('');
+    setName('');
+    setMessage('');
+    setErrorMessage('');
+  };
+
   return (
-    <div>
-      <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
-    </div>
+    <>
+      <form id="contact-form">
+        <div className="form-group" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+            <label htmlFor="name">Name</label>
+            <input
+              className="form-control"
+              value={name}
+              name="name"
+              onChange={handleInputChange}
+              type="name"
+              placeholder="name"
+            />
+        </div>
+        <div className="form-group" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+            <label htmlFor="email">Email address</label>
+            <input
+              className="form-control"
+              value={email}
+              name="email"
+              onChange={handleInputChange}
+              type="email"
+              placeholder="email"
+            />
+        </div>
+        <div className="form-group" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+            <label htmlFor="message">Message</label>
+            <textarea 
+              className="form-control"
+              value={message}
+              name="message"
+              onChange={handleInputChange}
+              type="message"
+              placeholder="Enter message here."
+            />
+        </div>
+        <button type="button" onClick={handleFormSubmit}>Submit</button>
+      </form>
+      {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
+    </>
   );
 }
