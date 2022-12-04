@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/richardjhong/portfolio-v2/static/css/main.7eff8b15.css",
+    "main.js": "/richardjhong/portfolio-v2/static/js/main.4ee91fe7.js",
+    "static/media/headshot.png": "/richardjhong/portfolio-v2/static/media/headshot.d35ae4a39db50f12d21a.png",
+    "pdf.worker.js": "/richardjhong/portfolio-v2/f533a22c7694057ff58afd612dc9d45d.js",
+    "static/media/resume.pdf": "/richardjhong/portfolio-v2/static/media/resume.54cbddd7f57f2ba4eebc.pdf",
+    "index.html": "/richardjhong/portfolio-v2/index.html",
+    "main.7eff8b15.css.map": "/richardjhong/portfolio-v2/static/css/main.7eff8b15.css.map",
+    "main.4ee91fe7.js.map": "/richardjhong/portfolio-v2/static/js/main.4ee91fe7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7eff8b15.css",
+    "static/js/main.4ee91fe7.js"
+  ]
+}
