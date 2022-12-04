@@ -24,6 +24,9 @@ body {
 }
 
 /*                  ABOUT                 */
+#about {
+  min-height: calc(100vh - 116px);
+}
 
 .slider {
   width: 80%;
@@ -42,7 +45,8 @@ body {
 #projects {
   padding: 50px 15px;
   border-bottom: 1px solid #dcd9d9;
-  text-align: center 
+  text-align: center;
+  min-height: calc(100vh - 116px);
 }
 
 #projects h2 {
@@ -101,7 +105,8 @@ body {
 #resume {
   padding: 50px 15px;
   border-bottom: 1px solid #dcd9d9;
-  text-align: center 
+  text-align: center;
+  min-height: calc(100vh - 116px);
 }
 
 #resume h2 {
@@ -114,7 +119,7 @@ body {
 #contact {
   padding: 50px 15px;
   border-bottom: 1px solid #dcd9d9;
- 
+  min-height: calc(100vh - 116px);
 }
 
 #contact h2 {
