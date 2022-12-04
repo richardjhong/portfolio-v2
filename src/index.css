@@ -1,6 +1,12 @@
+:root {
+  --pink: #EEE2DC;
+  --darkblue: #123C69;
+  --lightgrey: #BAB2B5;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
-  background-color: #EEE2DC;
+  background-color: var(--pink);
   color: black;
   padding: 0;
   margin: 0;
@@ -32,11 +38,11 @@ body {
   width: 80%;
   height: 15px;
   border-radius: 34px;
-  background-color: #BAB2B5;
+  background-color: var(--lightgrey);
 }
 
 .inner-slider {
-  background-color: #123C69;
+  background-color: var(--darkblue);
   height: 15px;
   border-radius: 34px;
 }
@@ -118,7 +124,7 @@ body {
 /*                        CONTACT                */
 
 #contact {
-  /* padding: 50px 15px; */
+  padding: 50px 15px;
   border-bottom: 1px solid #dcd9d9;
   min-height: calc(100vh - 116px);
 }
@@ -130,7 +136,7 @@ body {
 }
 
 #contact-form {
-  background-color: #123C69;
+  background-color: var(--darkblue);
   padding: 30px;
   height: 500px;
 }

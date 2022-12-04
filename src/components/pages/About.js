@@ -48,7 +48,7 @@ export default function About () {
             </div>
         <div className="col-6 px-5 fs-4 pt-5 mt-2" id="text_about">
           <p>
-            My name is <span style={{ color: "#123C69" }}>Richard Hong</span>. I'm a Korean American graduate of the University of Texas at Austin. Since graduating, I found a conceptual overlap between my Philosophy major and programming, thus affirming my interest in software. I enjoy translating code into a great user experience. In my spare time, I enjoy studying etymology of the English and Korean languages. Feel free to check out my projects and connect with me if you have a future collaboration endeavor in mind!
+            My name is <span style={{ color: "#123C69" }}>Richard Hong</span>. I'm a Korean American and a graduate of the University of Texas at Austin. Since graduating, I found a conceptual overlap between my Philosophy major and programming, thus affirming my interest in software. I enjoy translating code into a great user experience. In my spare time, I enjoy studying etymology of the English and Korean languages. Feel free to check out my projects and connect with me if you have a future collaboration endeavor in mind!
           </p>
         </div>
         <div className="col-6 pt-5" id="stats_about">
