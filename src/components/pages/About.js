@@ -49,8 +49,8 @@ export default function About () {
           My name is <span style={{ color: "#123C69" }}>Richard Hong</span>. I graduated from U.T. Austin and found a conceptual overlap between my Philosophy major and programming, thus affirming my interest in software. I enjoy translating code into a great user experience. Feel free to check out my projects and connect with me if you have a future collaboration endeavor in mind!
         </div>
         <div className="col-6 pt-5" id="stats_about">
-          {slider.map((Val) => {
-            const { text, width } = Val;
+          {slider.map((val) => {
+            const { text, width } = val;
             return (
               <>
                 <div className="mb-3">

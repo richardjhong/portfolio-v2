@@ -1,6 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import styled from 'styled-components';
 
 const List = styled.ul`
@@ -24,14 +23,14 @@ function Footer() {
       "url":"https://www.linkedin.com/in/hongjrichard/",
       "className": "faLinkedIn",
       "key": "linkedin-social",
-      "icon": faLinkedin 
+      "icon": FaLinkedin 
     },
     {
       "name":"github",
       "url":"https://github.com/richardjhong",
       "className": "faGithub",
       "key": "github-social",
-      "icon": faGithub
+      "icon": FaGithub
     },
   ]
 
@@ -44,10 +43,11 @@ function Footer() {
       <List>   
         {
           socialLinks.map((item)=>{
+            const Icon = item.icon
             return(
               <li key={item.key}>
                 <a href={item.url}>
-                  <FontAwesomeIcon icon={item.icon} style={{margin: 5}}/>
+                  <Icon style={{ margin: 5}}/>
                 </a>
               </li>
             )

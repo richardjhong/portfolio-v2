@@ -1,42 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { projects } from "../../Data";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faDesktop } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { FaCode, FaGithub, FaDesktop } from "react-icons/fa";
+import ReactTooltip from 'react-tooltip';
 
 export default function Projects() {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleOnMouseOver = () => {
+    setIsHovering(true);
+  }
+
+  const handleOnMouseOut = () => {
+    setIsHovering(false);
+  }
   return (
     <div className="background-alt" id="projects">
-      <h2 className="heading"><FontAwesomeIcon icon={faCode} /> Projects</h2>
+      <h2 className="heading"><FaCode /> Projects</h2>
       <div className="container">
         <div className="row">
         {projects.map((val, key) => {
-          const { image, heading, github, deployed_site, description } = val;
+          const { image, alt, heading, github, deployed_site, description, devicons } = val;
           return (
-            <div className="project">
+            <div className="project" onMouseOver={handleOnMouseOver} onMouseOut={handleOnMouseOut}>
             <div className="project-image">
-              <div className="project-image"><img alt="scu banner" draggable="false" src={image} width="300" height="50%"/>
+              <div className="project-image"><img alt={alt} draggable="false" src={image} width="300" height="50%"/>
               </div>
             </div>
+            
             <div className="project-info">
               <h3>{heading}</h3>
               <p>{description}</p>
               {deployed_site !== null ? (
                 <>
-                <FontAwesomeIcon icon={faGithub} />
+                <FaGithub/>
                 <a aria-label="github" draggable="false" href={github} target="_blank" rel="noopener noreferrer"> 
-                  Github Repo | <FontAwesomeIcon icon={faDesktop} /><a aria-label="website" draggable="false" href="https://JAVAB3ANS.github.io/scu-discord-bot" target="_blank" rel="noopener noreferrer"> View Project Site</a>
+                  Github Repo | <FaDesktop /><a aria-label="website" draggable="false" href={deployed_site} target="_blank" rel="noopener noreferrer"> View Project Site</a>
                 </a>
               </>
               ) : (
                 <>
-                <FontAwesomeIcon icon={faGithub} />
+                <FaGithub />
                 <a aria-label="github" draggable="false" href={github} target="_blank" rel="noopener noreferrer"> 
                   Github Repo
-                </a>
+                </a>      
               </>
-              )}        
-            </div>
+              )}
+              <div className="project-skill-container">
+                {devicons.map(skill => {
+                  const Icon = skill.icon
+                  return (
+                    <>
+                      <Icon 
+                        style={{ margin: 5}} 
+                        data-tip={skill.tooltipMessage} 
+                        data-for='skillTooltip' 
+                        data-place='top'
+                      />
+                      <ReactTooltip id="skillTooltip" />
+                    </>
+                  )
+                })}
+              </div>         
+            </div>    
           </div> 
           );
         })}            

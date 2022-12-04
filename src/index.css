@@ -60,7 +60,8 @@ body {
 }
 
 .project-image {
-  float: left 
+  float: left;
+  padding: 10px;
 }
 
 .project-info {
@@ -89,6 +90,11 @@ body {
   margin: 0;
   padding: 30px 15px;
   transform: none 
+}
+
+.project-skill-container {
+  margin: 0 0 15px 0;
+  
 }
 
 @media (min-width: 300px) and (max-width: 575px) {
