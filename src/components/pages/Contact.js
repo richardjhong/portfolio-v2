@@ -57,7 +57,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="background-alt" id="contact">
+    <div className="background-alt" id="contact" style={{height: '100vh'}}>
       <h2 className="heading"><GrInbox /> Contact</h2>
       <form id="contact-form">
         <div className="form-group" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>

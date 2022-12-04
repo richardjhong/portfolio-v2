@@ -7,7 +7,7 @@ import { slider } from "../../Data";
 export default function About () {
   return (
     <>
-    <div className="container-fluid">
+    <div className="container-fluid" style={{height: '100vh'}}>
       <div className="row mt-5">
         <div className="col-12 text-center fw-bold fs-1 mb-5" id="heading">
           About <span style={{ color: "#123C69" }}> Me</span>

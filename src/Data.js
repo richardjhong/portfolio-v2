@@ -226,3 +226,28 @@ export const socialLinks = [
     "icon": FaGithub
   },
 ]
+
+export const websiteTechStack = {
+  devicons: [
+    {
+      icon: SiReact,
+      tooltipMessage: "React"
+    },
+    {
+      icon: SiStyledcomponents,
+      tooltipMessage: "styled-components"
+    },
+    {
+      icon: SiBootstrap,
+      tooltipMessage: "Bootstrap"
+    },
+    {
+      icon: SiHtml5,
+      tooltipMessage: "HTML5"
+    },
+    {
+      icon: SiCss3,
+      tooltipMessage: "CSS3"
+    },  
+  ]
+}

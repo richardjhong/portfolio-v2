@@ -50,6 +50,7 @@ export default function Projects() {
                   return (
                     <>
                       <Icon 
+                        size={28}
                         style={{ margin: 5}} 
                         data-tip={skill.tooltipMessage} 
                         data-for='skillTooltip' 
