@@ -1,28 +1,80 @@
-import { SiExpress, SiNodedotjs, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql, SiReact, SiStyledcomponents, SiHeroku, SiGithub, SiMongodb } from "react-icons/si";
+import { SiExpress, SiNodedotjs, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql, SiReact, SiStyledcomponents, SiHeroku, SiGithub, SiMongodb, SiJavascript } from "react-icons/si";
 import { GrCli } from "react-icons/gr";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const slider = [
   {
-    text: "HTML",
-    width: "65%",
-  },
-  {
-    text: "CSS",
-    width: "70%",
-  },
-  {
-    text: "Bootstrap",
-    width: "60%",
-  },
-  {
     text: "JS",
     width: "80%",
+    devicons: [
+      {
+        icon: SiJavascript,
+        tooltipMessage: "Javascript"
+      }
+    ]
   },
   {
     text: "React JS",
-    width: "70%",
+    width: "75%",
+    devicons: [
+      {
+        icon: SiReact,
+        tooltipMessage: "React"
+      }
+    ]
   },
+  {
+    text: "Node/Express",
+    width: "75%",
+    devicons: [
+      {
+        icon: SiNodedotjs,
+        tooltipMessage: "Node"
+      },
+      {
+        icon: SiExpress,
+        tooltipMessage: "Express"
+      },
+    ]
+  },
+  {
+    text: "MongoDB",
+    width: "65%",
+    devicons: [
+      {
+        icon: SiMongodb,
+        tooltipMessage: "MongoDB"
+      }
+    ]
+  },
+  {
+    text: "MySQL/Sequelize",
+    width: "70%",
+    devicons: [
+      {
+        icon: SiMysql,
+        tooltipMessage: "MySQL"
+      },
+      {
+        icon: SiSequelize,
+        tooltipMessage: "Sequelize"
+      }
+    ]
+  },
+  {
+    text: "HTML/CSS",
+    width: "70%",
+    devicons: [
+      {
+        icon: SiHtml5,
+        tooltipMessage: "HTML5"
+      },
+      {
+        icon: SiCss3,
+        tooltipMessage: "CSS3"
+      }
+    ]
+  }, 
 ];
 
 export const projects = [
@@ -61,6 +113,10 @@ export const projects = [
       {
         icon: SiGithub,
         tooltipMessage: "Github"
+      }, 
+      {
+        icon: SiJavascript,
+        tooltipMessage: "Javascript"
       }
     ]
   },
@@ -87,7 +143,11 @@ export const projects = [
       {
         icon: SiGithub,
         tooltipMessage: "Github"
-      } 
+      },
+      {
+        icon: SiJavascript,
+        tooltipMessage: "Javascript"
+      }
     ]
   },
   {
@@ -121,6 +181,10 @@ export const projects = [
       {
         icon: SiGithub,
         tooltipMessage: "Github"
+      },
+      {
+        icon: SiJavascript,
+        tooltipMessage: "Javascript"
       }
     ]
   },
@@ -147,6 +211,10 @@ export const projects = [
       {
         icon: SiGithub,
         tooltipMessage: "Github"
+      },
+      {
+        icon: SiJavascript,
+        tooltipMessage: "Javascript"
       }
     ]
   },
@@ -181,6 +249,10 @@ export const projects = [
       {
         icon: SiGithub,
         tooltipMessage: "Github"
+      },
+      {
+        icon: SiJavascript,
+        tooltipMessage: "Javascript"
       }
     ]
   },
@@ -211,6 +283,10 @@ export const projects = [
       {
         icon: SiGithub,
         tooltipMessage: "Github"
+      },
+      {
+        icon: SiJavascript,
+        tooltipMessage: "Javascript"
       }
     ]
   },
@@ -241,6 +317,10 @@ export const projects = [
       {
         icon: SiGithub,
         tooltipMessage: "Github"
+      },
+      {
+        icon: SiJavascript,
+        tooltipMessage: "Javascript"
       }
     ]
   },
@@ -267,6 +347,10 @@ export const projects = [
       {
         icon: SiGithub,
         tooltipMessage: "Github"
+      },
+      {
+        icon: SiJavascript,
+        tooltipMessage: "Javascript"
       }
     ]
   },
@@ -311,5 +395,9 @@ export const websiteTechStack = {
       icon: SiCss3,
       tooltipMessage: "CSS3"
     },  
+    {
+      icon: SiJavascript,
+      tooltipMessage: "Javascript"
+    }
   ]
 }

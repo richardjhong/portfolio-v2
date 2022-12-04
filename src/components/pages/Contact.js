@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
-import { GrInbox } from "react-icons/gr";
+import { GrInbox, GrSend } from "react-icons/gr";
 
 export default function Contact() {
   const [email, setEmail] = useState('')  
@@ -93,7 +93,7 @@ export default function Contact() {
               placeholder="Enter message here."
             />
         </div>
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+        <button type="button" onClick={handleFormSubmit}><GrSend /></button>
       </form>
       {errorMessage && (
         <div>
