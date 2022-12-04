@@ -17,6 +17,7 @@ This app was bootstrapped with [Create React App](https://github.com/facebook/cr
   - [Architecture](#architecture)
   - [Livesite](#livesite)
   - [Screenshot](#screenshot)
+  - [Sources](#sources)
   - [Improvements](#improvements)
   - [Thoughts](#thoughts)
   - [License](#license)
@@ -62,6 +63,8 @@ The user can now navigate to the url http://localhost:3000/ although the ap shou
 
 ## Architecture
 For this app, the following image shows the file architecture:
+
+
 ![file_architecture](./src/assets/images/file_architecture.png)
 
 The src folder contains the components folder with a subfolder pages, a NavTabs header, PortfolioContainer to house the main page content, and a Footer.
@@ -71,6 +74,11 @@ The src folder contains the components folder with a subfolder pages, a NavTabs 
 
 ## Screenshot
 ![screenshot](./public/assets/images/react_portfolio.png)
+
+## Sources
+The following two sources gave me inspiration:
+  * [How I Made My Portfolio](https://tekolio.com/how-i-made-my-portfolio-in-react/) by Ateev Duggal | My About page is largely inspired by his version.
+  * [JAVAB3ANS's Github Portfolio](https://github.com/JAVAB3ANS/portfolio?ref=reactjsexample.com) by Jason Vu | My Projects page is largely inspired by his version.
 
 ## Improvements
 Admittedly I worked on the About Page and Projects page much more compared to Resume and Contact pages; as such I'd like to continue to build out the latter two which remain fairly barebones. I'd also like to introduce more animations e.g. animation when changing pages and possibly when scrolling. I'd also like to refactor the styling throughout the project which is a mix of an imported css file, inline styling, and styled-components. Lastly I'd like to look a bit more into choice of color theme and combinations. 
