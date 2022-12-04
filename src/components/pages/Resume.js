@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import resumePDF from '../../assets/resume.pdf'
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import { CgFileDocument } from "react-icons/cg";
 
 export default function Resume() {
   const [numPages, setNumPages] = useState(null);
@@ -11,7 +12,8 @@ export default function Resume() {
   }
 
   return (
-    <div>
+    <div className="background-alt" id="resume">
+      <h2 className="heading"><CgFileDocument /> Resume</h2>
       <a href={resumePDF} download>
         <button>
           Download CV

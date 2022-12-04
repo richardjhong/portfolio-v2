@@ -39,12 +39,15 @@ body {
   height: 15px;
   border-radius: 34px;
 }
+
 /*                        PROJECTS                */
+
 #projects {
   padding: 50px 15px;
   border-bottom: 1px solid #dcd9d9;
   text-align: center 
 }
+
 #projects h2 {
   color: #374054;
   margin-bottom: 50px 
@@ -94,7 +97,33 @@ body {
 
 .project-skill-container {
   margin: 0 0 15px 0;
-  
+}
+
+/*                        RESUME                */
+
+#resume {
+  padding: 50px 15px;
+  border-bottom: 1px solid #dcd9d9;
+  text-align: center 
+}
+
+#resume h2 {
+  color: #374054;
+  margin-bottom: 50px 
+}
+
+/*                        CONTACT                */
+
+#contact {
+  padding: 50px 15px;
+  border-bottom: 1px solid #dcd9d9;
+ 
+}
+
+#contact h2 {
+  color: #374054;
+  margin-bottom: 50px ;
+  text-align: center;
 }
 
 @media (min-width: 300px) and (max-width: 575px) {

@@ -1,4 +1,4 @@
-import { SiExpress, SiNodedotjs, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql } from "react-icons/si";
+import { SiExpress, SiNodedotjs, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql, SiReact, SiStyledcomponents } from "react-icons/si";
 import { GrCli } from "react-icons/gr";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -79,8 +79,38 @@ export const projects = [
     ]
   },
   {
+    image: "./assets/images/react_portfolio.png",
+    alt: "React Image",
+    heading: "React Portfolio",
+    github: "https://github.com/richardjhong/portfolio-v2",
+    deployed_site: null,
+    description: "This app (the very one that is being viewed now!) showcases use of React and its robust dependencies to create an online interactive portfolio.",
+    devicons: [
+      {
+        icon: SiReact,
+        tooltipMessage: "React"
+      },
+      {
+        icon: SiStyledcomponents,
+        tooltipMessage: "styled-components"
+      },
+      {
+        icon: SiBootstrap,
+        tooltipMessage: "Bootstrap"
+      },
+      {
+        icon: SiHtml5,
+        tooltipMessage: "HTML5"
+      },
+      {
+        icon: SiCss3,
+        tooltipMessage: "CSS3"
+      },  
+    ]
+  },
+  {
     image: "./assets/images/forum.png",
-    alt: "Refactor Forum BlogImage",
+    alt: "Refactor Forum Blog Image",
     heading: "Refactor Forum Blog",
     github: "https://github.com/richardjhong/refactor-forum-blog",
     deployed_site: "https://refactor-forums.herokuapp.com/login",

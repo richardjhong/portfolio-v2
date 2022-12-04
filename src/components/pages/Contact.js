@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+import { GrInbox } from "react-icons/gr";
 
 export default function Contact() {
   const [email, setEmail] = useState('')
@@ -56,7 +57,8 @@ export default function Contact() {
   };
 
   return (
-    <>
+    <div className="background-alt" id="contact">
+      <h2 className="heading"><GrInbox /> Contact</h2>
       <form id="contact-form">
         <div className="form-group" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
             <label htmlFor="name">Name</label>
@@ -98,6 +100,6 @@ export default function Contact() {
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
-    </>
+    </div>
   );
 }

@@ -41,10 +41,9 @@ export default function Footer() {
  
   window.addEventListener('scroll', toggleVisible);
 
-
   return (
     <footer>
-    <div className="row">
+    <div className="row" style={{ marginTop: 10}}>
       <List>   
         {
           socialLinks.map((item)=>{
@@ -52,7 +51,7 @@ export default function Footer() {
             return(
               <li key={item.key}>
                 <a href={item.url}>
-                  <Icon style={{ margin: 5}}/>
+                  <Icon size={70} style={{ margin: 5, color: "#123C69"}}/>
                 </a>
               </li>
             )
