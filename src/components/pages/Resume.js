@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import resumePDF from '../../assets/resume.pdf'
+import resumePDF from './resume.pdf'
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import { CgFileDocument } from "react-icons/cg";
 
