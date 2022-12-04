@@ -1,6 +1,7 @@
-import { SiExpress, SiNodedotjs, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql, SiReact, SiStyledcomponents, SiHeroku, SiGithub, SiMongodb, SiJavascript } from "react-icons/si";
+import { SiJavascript, SiReact, SiExpress, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql, SiStyledcomponents, SiHeroku, SiGithub, SiMongodb } from "react-icons/si";
 import { GrCli } from "react-icons/gr";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { CgCPlusPlus } from "react-icons/cg";
+import { FaGithub, FaLinkedin, FaNode } from "react-icons/fa";
 
 export const slider = [
   {
@@ -24,11 +25,25 @@ export const slider = [
     ]
   },
   {
+    text: "HTML/CSS",
+    width: "70%",
+    devicons: [
+      {
+        icon: SiHtml5,
+        tooltipMessage: "HTML5"
+      },
+      {
+        icon: SiCss3,
+        tooltipMessage: "CSS3"
+      }
+    ]
+  }, 
+  {
     text: "Node/Express",
     width: "75%",
     devicons: [
       {
-        icon: SiNodedotjs,
+        icon: FaNode,
         tooltipMessage: "Node"
       },
       {
@@ -62,19 +77,15 @@ export const slider = [
     ]
   },
   {
-    text: "HTML/CSS",
-    width: "70%",
+    text: "C++",
+    width: "60%",
     devicons: [
       {
-        icon: SiHtml5,
-        tooltipMessage: "HTML5"
+        icon: CgCPlusPlus,
+        tooltipMessage: "C++"
       },
-      {
-        icon: SiCss3,
-        tooltipMessage: "CSS3"
-      }
     ]
-  }, 
+  },
 ];
 
 export const projects = [
@@ -87,7 +98,11 @@ export const projects = [
     description: "This app leverages a deckbuilder npm package along with various other npm packages to create a fullstack card game taking care of a cat.",
     devicons: [
       {
-        icon: SiNodedotjs,
+        icon: SiJavascript,
+        tooltipMessage: "JavaScript"
+      },
+      {
+        icon: FaNode,
         tooltipMessage: "Node"
       },
       {
@@ -114,10 +129,6 @@ export const projects = [
         icon: SiGithub,
         tooltipMessage: "Github"
       }, 
-      {
-        icon: SiJavascript,
-        tooltipMessage: "JavaScript"
-      }
     ]
   },
   {
@@ -128,6 +139,10 @@ export const projects = [
     deployed_site: "https://cat-wonderland.herokuapp.com/",
     description: "This app leverages Emotion Analysis API and Spotify API to provide playlists upon detecting the emotion of user input text.",
     devicons: [
+      {
+        icon: SiJavascript,
+        tooltipMessage: "JavaScript"
+      },
       {
         icon: SiHtml5,
         tooltipMessage: "HTML5"
@@ -143,10 +158,6 @@ export const projects = [
       {
         icon: SiGithub,
         tooltipMessage: "Github"
-      },
-      {
-        icon: SiJavascript,
-        tooltipMessage: "JavaScript"
       }
     ]
   },
@@ -158,6 +169,10 @@ export const projects = [
     deployed_site: "https://richardjhong.github.io/portfolio-v2/#about",
     description: "This app (the very one that is being viewed now!) showcases use of React and its robust ecosystem to create an online interactive portfolio.",
     devicons: [
+      {
+        icon: SiJavascript,
+        tooltipMessage: "JavaScript"
+      },
       {
         icon: SiReact,
         tooltipMessage: "React"
@@ -181,11 +196,7 @@ export const projects = [
       {
         icon: SiGithub,
         tooltipMessage: "Github"
-      },
-      {
-        icon: SiJavascript,
-        tooltipMessage: "JavaScript"
-      }
+      },    
     ]
   },
   {
@@ -197,7 +208,11 @@ export const projects = [
     description: "This app simulates a social network's Mongo database with API calls to interact with users, thoughts, and reactions to thoughts.",
     devicons: [
       {
-        icon: SiNodedotjs,
+        icon: SiJavascript,
+        tooltipMessage: "JavaScript"
+      },
+      {
+        icon: FaNode,
         tooltipMessage: "Node"
       },
       {
@@ -212,10 +227,7 @@ export const projects = [
         icon: SiGithub,
         tooltipMessage: "Github"
       },
-      {
-        icon: SiJavascript,
-        tooltipMessage: "JavaScript"
-      }
+      
     ]
   },
   {
@@ -227,7 +239,11 @@ export const projects = [
     description: "This app leverages SQL database and handlebars to create a mock forum blog in which users can post threads and comment on existing posts.",
     devicons: [
       {
-        icon: SiNodedotjs,
+        icon: SiJavascript,
+        tooltipMessage: "JavaScript"
+      },
+      {
+        icon: FaNode,
         tooltipMessage: "Node"
       },
       {
@@ -243,17 +259,13 @@ export const projects = [
         tooltipMessage: "Handlebars"
       },
       {
-        icon: SiHeroku,
-        tooltipMessage: "Heroku"
-      },
-      {
         icon: SiGithub,
         tooltipMessage: "Github"
       },
       {
-        icon: SiJavascript,
-        tooltipMessage: "JavaScript"
-      }
+        icon: SiHeroku,
+        tooltipMessage: "Heroku"
+      },
     ]
   },
   {
@@ -265,7 +277,11 @@ export const projects = [
     description: "This app takes user input via the CLI and creates an index.html file with a badge for each team member based on the information given. Testing (with Jest) is also emphasized in this project.",
     devicons: [
       {
-        icon: SiNodedotjs,
+        icon: SiJavascript,
+        tooltipMessage: "JavaScript"
+      },
+      {
+        icon: FaNode,
         tooltipMessage: "Node"
       },
       {
@@ -277,17 +293,13 @@ export const projects = [
         tooltipMessage: "Jest"
       },
       {
-        icon: GrCli,
-        tooltipMessage: "CLI"
-      },
-      {
         icon: SiGithub,
         tooltipMessage: "Github"
       },
       {
-        icon: SiJavascript,
-        tooltipMessage: "JavaScript"
-      }
+        icon: GrCli,
+        tooltipMessage: "CLI"
+      },    
     ]
   },
   {
@@ -298,6 +310,10 @@ export const projects = [
     deployed_site: "https://richardjhong.github.io/weather-forecast/",
     description: "This app leverages jQuery, Bootstrap, and API calls from OpenWeather to get/store a city's local weather/ 5 day forecast with persistent data.",
     devicons: [
+      {
+        icon: SiJavascript,
+        tooltipMessage: "JavaScript"
+      },
       {
         icon: SiHtml5,
         tooltipMessage: "HTML5"
@@ -318,10 +334,6 @@ export const projects = [
         icon: SiGithub,
         tooltipMessage: "Github"
       },
-      {
-        icon: SiJavascript,
-        tooltipMessage: "JavaScript"
-      }
     ]
   },
   {
@@ -333,7 +345,11 @@ export const projects = [
     description: "This app takes user input via CLI (command line interface) commands and can interact, update, add, and delete employees/roles/departments to an SQL database.",
     devicons: [
       {
-        icon: SiNodedotjs,
+        icon: SiJavascript,
+        tooltipMessage: "JavaScript"
+      },
+      {
+        icon: FaNode,
         tooltipMessage: "Node"
       },
       {
@@ -348,10 +364,6 @@ export const projects = [
         icon: SiGithub,
         tooltipMessage: "Github"
       },
-      {
-        icon: SiJavascript,
-        tooltipMessage: "JavaScript"
-      }
     ]
   },
 ];
@@ -376,16 +388,12 @@ export const socialLinks = [
 export const websiteTechStack = {
   devicons: [
     {
+      icon: SiJavascript,
+      tooltipMessage: "JavaScript"
+    },
+    {
       icon: SiReact,
       tooltipMessage: "React"
-    },
-    {
-      icon: SiStyledcomponents,
-      tooltipMessage: "styled-components"
-    },
-    {
-      icon: SiBootstrap,
-      tooltipMessage: "Bootstrap"
     },
     {
       icon: SiHtml5,
@@ -394,10 +402,14 @@ export const websiteTechStack = {
     {
       icon: SiCss3,
       tooltipMessage: "CSS3"
-    },  
+    },
     {
-      icon: SiJavascript,
-      tooltipMessage: "JavaScript"
-    }
+      icon: SiBootstrap,
+      tooltipMessage: "Bootstrap"
+    },
+    {
+      icon: SiStyledcomponents,
+      tooltipMessage: "styled-components"
+    },
   ]
 }
