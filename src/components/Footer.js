@@ -26,7 +26,7 @@ const Button = styled.div`
 `
 
 const FooterContainer = styled.footer`
-  background-color: #EDC7B7;
+  background-color: #C1C8E4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +48,7 @@ const CopyrightContainer = styled.div`
   display: flex;
   flex: 1;
   justify-content: flex-end;
+  margin-right: 10px;
 `
 
 export default function Footer() {
@@ -55,7 +56,7 @@ export default function Footer() {
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    scrolled > 300 ? setVisible(true) : setVisible(false)
+    scrolled > 250 ? setVisible(true) : setVisible(false)
   }
 
   const scrollToTop = () =>{
@@ -71,7 +72,7 @@ export default function Footer() {
     <div >
       <FooterContainer>
         <LeftOfList>
-          <h4 style={{display: "flex", justifyContent: "center"}}>This website was made with:</h4>
+          <h4 style={{display: "flex", justifyContent: "center"}}>Made with:</h4>
           <TechStackContainer>    
             {websiteTechStack.devicons.map(skill => {
               const Icon = skill.icon;

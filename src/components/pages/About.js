@@ -4,6 +4,7 @@ import "react-typewriter-animate/dist/Typewriter.css";
 import headshot from '../../assets/images/headshot.png'
 import { slider } from "../../Data";
 
+
 export default function About () {
   return (
     <>

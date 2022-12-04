@@ -3,7 +3,7 @@ import { validateEmail } from '../../utils/helpers';
 import { GrInbox } from "react-icons/gr";
 
 export default function Contact() {
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('')  
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
   const [errorMessage, setErrorMessage] = useState('');
@@ -68,7 +68,7 @@ export default function Contact() {
               name="name"
               onChange={handleInputChange}
               type="name"
-              placeholder="name"
+              placeholder="Name"
             />
         </div>
         <div className="form-group" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
@@ -79,7 +79,7 @@ export default function Contact() {
               name="email"
               onChange={handleInputChange}
               type="email"
-              placeholder="email"
+              placeholder="Email"
             />
         </div>
         <div className="form-group" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>

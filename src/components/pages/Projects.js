@@ -24,7 +24,7 @@ export default function Projects() {
           return (
             <Project>
               <div className="project-image">
-                <img alt={alt} draggable="false" src={image} width="300" height="50%"/>
+                <img alt={alt} draggable="false" src={process.env.PUBLIC_URL + image} width="300" height="100%"/>
               </div>
             <div className="project-info">
               <h3>{heading}</h3>

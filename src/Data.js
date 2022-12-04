@@ -1,4 +1,4 @@
-import { SiExpress, SiNodedotjs, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql, SiReact, SiStyledcomponents } from "react-icons/si";
+import { SiExpress, SiNodedotjs, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql, SiReact, SiStyledcomponents, SiHeroku, SiGithub, SiMongodb } from "react-icons/si";
 import { GrCli } from "react-icons/gr";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -27,7 +27,7 @@ export const slider = [
 
 export const projects = [
   {
-    image: "./assets/images/Cat_Wonderland.png",
+    image: "/assets/images/Cat_Wonderland.png",
     alt: "Cat Wonderland Image",
     heading: "Cat Wonderland",
     github: "https://github.com/richardjhong/cat-wonderland",
@@ -47,17 +47,25 @@ export const projects = [
         tooltipMessage: "Sequelize"
       },
       {
+        icon: SiHeroku,
+        tooltipMessage: "Heroku"
+      },
+      {
         icon: SiJquery,
         tooltipMessage: "jQuery"
       },
       {
         icon: SiHandlebarsdotjs,
         tooltipMessage: "Handlebars"
+      },
+      {
+        icon: SiGithub,
+        tooltipMessage: "Github"
       }
     ]
   },
   {
-    image: "./assets/images/Journal_Playlist.gif",
+    image: "/assets/images/Journal_Playlist.gif",
     alt: "Journal Playlist Image",
     heading: "Journal Playlist",
     github: "https://github.com/richardjhong/journal-playlist",
@@ -75,16 +83,20 @@ export const projects = [
       {
         icon: SiSpotify,
         tooltipMessage: "SpotifyAPI"
-      },  
+      }, 
+      {
+        icon: SiGithub,
+        tooltipMessage: "Github"
+      } 
     ]
   },
   {
-    image: "./assets/images/react_portfolio.png",
+    image: "/assets/images/react_portfolio.gif",
     alt: "React Image",
     heading: "React Portfolio",
     github: "https://github.com/richardjhong/portfolio-v2",
-    deployed_site: null,
-    description: "This app (the very one that is being viewed now!) showcases use of React and its robust dependencies to create an online interactive portfolio.",
+    deployed_site: "https://richardjhong.github.io/portfolio-v2/#about",
+    description: "This app (the very one that is being viewed now!) showcases use of React and its robust ecosystem to create an online interactive portfolio.",
     devicons: [
       {
         icon: SiReact,
@@ -106,10 +118,40 @@ export const projects = [
         icon: SiCss3,
         tooltipMessage: "CSS3"
       },  
+      {
+        icon: SiGithub,
+        tooltipMessage: "Github"
+      }
     ]
   },
   {
-    image: "./assets/images/forum.png",
+    image: "/assets/images/mock_social_network_api.png",
+    alt: "Mock Social Network API Image",
+    heading: "Mock Social Network API",
+    github: "https://github.com/richardjhong/mock-social-network-api",
+    deployed_site: null,
+    description: "This app simulates a social network's Mongo database with API calls to interact with users, thoughts, and reactions to thoughts.",
+    devicons: [
+      {
+        icon: SiNodedotjs,
+        tooltipMessage: "Node"
+      },
+      {
+        icon: SiExpress,
+        tooltipMessage: "Express"
+      },
+      {
+        icon: SiMongodb,
+        tooltipMessage: "MongoDB"
+      },
+      {
+        icon: SiGithub,
+        tooltipMessage: "Github"
+      }
+    ]
+  },
+  {
+    image: "/assets/images/forum.png",
     alt: "Refactor Forum Blog Image",
     heading: "Refactor Forum Blog",
     github: "https://github.com/richardjhong/refactor-forum-blog",
@@ -131,11 +173,19 @@ export const projects = [
       {
         icon: SiHandlebarsdotjs,
         tooltipMessage: "Handlebars"
+      },
+      {
+        icon: SiHeroku,
+        tooltipMessage: "Heroku"
+      },
+      {
+        icon: SiGithub,
+        tooltipMessage: "Github"
       }
     ]
   },
   {
-    image: "./assets/images/team_badge_generator.png",
+    image: "/assets/images/team_badge_generator.png",
     alt: "Team Badge Generator Image",
     heading: "Team Badge Generator",
     github: "https://github.com/richardjhong/team-badge-generator",
@@ -158,10 +208,14 @@ export const projects = [
         icon: GrCli,
         tooltipMessage: "CLI"
       },
+      {
+        icon: SiGithub,
+        tooltipMessage: "Github"
+      }
     ]
   },
   {
-    image: "./assets/images/weather_forecast.gif",
+    image: "/assets/images/weather_forecast.gif",
     alt: "Weather Forecast Image",
     heading: "Weather Forecast",
     github: "https://github.com/richardjhong/weather-forecast",
@@ -183,11 +237,15 @@ export const projects = [
       {
         icon: SiBootstrap,
         tooltipMessage: "Bootstrap"
+      },
+      {
+        icon: SiGithub,
+        tooltipMessage: "Github"
       }
     ]
   },
   {
-    image: "./assets/images/employee_management_tracker.png",
+    image: "/assets/images/employee_management_tracker.png",
     alt: "Employee Management Tracker ",
     heading: "Employee Management Tracker",
     github: "https://github.com/richardjhong/employee-management-tracker",
@@ -206,6 +264,10 @@ export const projects = [
         icon: SiMysql,
         tooltipMessage: "MySQL"
       },
+      {
+        icon: SiGithub,
+        tooltipMessage: "Github"
+      }
     ]
   },
 ];
