@@ -80,6 +80,9 @@ The following two sources gave me inspiration:
   * [How I Made My Portfolio](https://tekolio.com/how-i-made-my-portfolio-in-react/) by Ateev Duggal | My About page is largely inspired by his version.
   * [JAVAB3ANS's Github Portfolio](https://github.com/JAVAB3ANS/portfolio?ref=reactjsexample.com) by Jason Vu | My Projects page is largely inspired by his version.
 
+Lastly for color theme, I referred to this [Visme link](https://visme.co/blog/website-color-schemes/) and settled on 15. Elegant Yet Approachable color combination.
+![color_theme](./src/assets/images/color_theme.jpeg)
+
 ## Improvements
 Admittedly I worked on the About Page and Projects page much more compared to Resume and Contact pages; as such I'd like to continue to build out the latter two which remain fairly barebones. I'd also like to introduce more animations e.g. animation when changing pages and possibly when scrolling. I'd also like to refactor the styling throughout the project which is a mix of an imported css file, inline styling, and styled-components. Lastly I'd like to look a bit more into choice of color theme and combinations. 
 
