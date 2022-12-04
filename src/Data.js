@@ -9,7 +9,7 @@ export const slider = [
     devicons: [
       {
         icon: SiJavascript,
-        tooltipMessage: "Javascript"
+        tooltipMessage: "JavaScript"
       }
     ]
   },
@@ -116,7 +116,7 @@ export const projects = [
       }, 
       {
         icon: SiJavascript,
-        tooltipMessage: "Javascript"
+        tooltipMessage: "JavaScript"
       }
     ]
   },
@@ -146,7 +146,7 @@ export const projects = [
       },
       {
         icon: SiJavascript,
-        tooltipMessage: "Javascript"
+        tooltipMessage: "JavaScript"
       }
     ]
   },
@@ -184,7 +184,7 @@ export const projects = [
       },
       {
         icon: SiJavascript,
-        tooltipMessage: "Javascript"
+        tooltipMessage: "JavaScript"
       }
     ]
   },
@@ -214,7 +214,7 @@ export const projects = [
       },
       {
         icon: SiJavascript,
-        tooltipMessage: "Javascript"
+        tooltipMessage: "JavaScript"
       }
     ]
   },
@@ -252,7 +252,7 @@ export const projects = [
       },
       {
         icon: SiJavascript,
-        tooltipMessage: "Javascript"
+        tooltipMessage: "JavaScript"
       }
     ]
   },
@@ -286,7 +286,7 @@ export const projects = [
       },
       {
         icon: SiJavascript,
-        tooltipMessage: "Javascript"
+        tooltipMessage: "JavaScript"
       }
     ]
   },
@@ -320,7 +320,7 @@ export const projects = [
       },
       {
         icon: SiJavascript,
-        tooltipMessage: "Javascript"
+        tooltipMessage: "JavaScript"
       }
     ]
   },
@@ -350,7 +350,7 @@ export const projects = [
       },
       {
         icon: SiJavascript,
-        tooltipMessage: "Javascript"
+        tooltipMessage: "JavaScript"
       }
     ]
   },
@@ -397,7 +397,7 @@ export const websiteTechStack = {
     },  
     {
       icon: SiJavascript,
-      tooltipMessage: "Javascript"
+      tooltipMessage: "JavaScript"
     }
   ]
 }

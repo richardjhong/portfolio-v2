@@ -118,7 +118,7 @@ body {
 /*                        CONTACT                */
 
 #contact {
-  padding: 50px 15px;
+  /* padding: 50px 15px; */
   border-bottom: 1px solid #dcd9d9;
   min-height: calc(100vh - 116px);
 }
@@ -128,6 +128,21 @@ body {
   margin-bottom: 50px ;
   text-align: center;
 }
+
+#contact-form {
+  background-color: #123C69;
+  padding: 30px;
+  height: 500px;
+}
+
+.form-group {
+  width: 75%;
+}
+
+.contact-label, .error-text {
+  color: #C1C8E4;
+}
+
 
 @media (min-width: 300px) and (max-width: 575px) {
   #main_hero {
