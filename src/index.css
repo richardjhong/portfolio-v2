@@ -2,6 +2,7 @@
   --pink: #EEE2DC;
   --darkblue: #123C69;
   --lightgrey: #BAB2B5;
+  --red: #AC3B61;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Montserrat:wght@100&family=Roboto+Condensed:wght@300&display=swap');
@@ -86,7 +87,7 @@ body {
 .project-info h3 {
   font-size: 1.5em;
   font-weight: 300;
-  color: #374054;
+  color: var(--red);
   margin: 0 0 15px 0 
 }
 
