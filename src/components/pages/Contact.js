@@ -7,16 +7,14 @@ import styled from 'styled-components';
 import avatar from '../../assets/images/contact_avatar.png'
 import 'react-toastify/dist/ReactToastify.css';
 
-const ContactContainer = styled.div`
-  display: flex;
-  
-`
 
 export default function Contact() {
   const [email, setEmail] = useState('')  
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
+
   const [errorMessage, setErrorMessage] = useState('');
+
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseOver = (e) => {
@@ -27,15 +25,15 @@ export default function Contact() {
     setIsHovering(false);
     if (e.target.name === 'name' && name === '') {
       setErrorMessage('Name field cannot be empty.')
-    }
+    } 
 
     if (e.target.name === 'email' && email === '') {
       setErrorMessage('Email field cannot be empty.')
-    }
+    } 
 
     if (e.target.name === 'message' && message === '') {
       setErrorMessage('Message field cannot be empty.')
-    }
+    } 
   };
 
   const handleInputChange = (e) => {
@@ -45,18 +43,23 @@ export default function Contact() {
 
     if (inputType === 'email') {
       setEmail(inputValue);
+      email !== '' && setErrorMessage('Email field cannot be empty.')
     } else if (inputType === 'name') {
       setName(inputValue);
+      name !== '' && setErrorMessage('Name field cannot be empty.')
     } else {
       setMessage(inputValue);
+      message !== '' && setErrorMessage('Message field cannot be empty.') 
     }
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    if (!validateEmail(email)) {
-      setErrorMessage('Email is invalid.');
+    !validateEmail(email) && setErrorMessage('Email is invalid.')
+    
+
+    if (!validateEmail(email) || email === '' || name === '' || message === '') {
       showToastMessage('fail')
       return;
     }
@@ -78,7 +81,19 @@ export default function Contact() {
         });
         return;
       case 'fail':
-        toast.error(`Uh oh! ${errorMessage}`, {
+        toast.error(
+          <div>
+            Uh oh! Please check that your inquiry meets the following conditions:
+            <br />
+            <br />
+            {/* Toastify rendering for checkmark or X mark on name */}
+            { name !== '' ? <p>{'\u2705'} A non-empty name field.</p> : <p>{'\u274C'} A non-empty name field.</p>}
+            {/* Toastify rendering for checkmark or X mark on email and valid email */}
+            { email !== '' && validateEmail(email) ? <p>{'\u2705'} A non-empty email address AND a valid email address.</p> : <p>{'\u274C'} 
+            A non-empty email address AND a valid email address.</p>}
+            {/* Toastify rendering for checkmark or X mark on message */}
+            { message !== '' ? <p>{'\u2705'} A non-empty message field.</p> : <p>{'\u274C'} A non-empty message field.</p>}
+          </div>, {
           icon: <RiErrorWarningLine />,
           position: toast.POSITION.TOP_CENTER
         });
@@ -98,7 +113,9 @@ export default function Contact() {
         <div className="col-6" >
           <form id="contact-form">
             <div className="form-group" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
-                <label className="contact-label" htmlFor="name">Name</label>
+                <label className="contact-label" htmlFor="name">
+                  { name !== '' ? <p>Name {'\u2705'}</p> : <p>Name</p>}
+                </label>
                 <input
                   className="form-control"
                   value={name}
@@ -109,7 +126,9 @@ export default function Contact() {
                 />
             </div>
             <div className="form-group" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
-                <label className="contact-label" htmlFor="email">Email address</label>
+                <label className="contact-label" htmlFor="email">
+                  { (email !== '' && validateEmail(email) )? <p>Email address {'\u2705'}</p> : <p>Email address</p>}
+                </label>
                 <input
                   className="form-control"
                   value={email}
@@ -120,7 +139,9 @@ export default function Contact() {
                 />
             </div>
             <div className="form-group" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
-                <label className="contact-label" htmlFor="message">Message</label>
+                <label className="contact-label" htmlFor="message">
+                  { message !== '' ? <p>Message {'\u2705'}</p> : <p>Message</p>}
+                </label>
                 <textarea 
                   className="form-control"
                   value={message}
@@ -130,14 +151,21 @@ export default function Contact() {
                   placeholder="Enter message here."
                 />
             </div>
-            <button type="button" onClick={handleFormSubmit} style={{width: "100px"}}><GrSend /></button>
+            <div style={{ marginTop: "10px" }}>
+              <button 
+                type="button" 
+                onClick={handleFormSubmit} 
+                style={{width: "100px"}}
+              >
+                <GrSend />
+              </button>
+            </div>
             {errorMessage && (
               <div>
                 <p className="error-text">{errorMessage}</p>
               </div>
             )}
-          </form>
-          
+          </form>     
         </div>
       </section>
       <ToastContainer />

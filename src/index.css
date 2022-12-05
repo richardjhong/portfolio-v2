@@ -147,6 +147,11 @@ body {
 
 .contact-label, .error-text {
   color: #C1C8E4;
+  margin-top: 5px;
+}
+
+.Toastify__toast-container {
+  width: 500px;
 }
 
 
