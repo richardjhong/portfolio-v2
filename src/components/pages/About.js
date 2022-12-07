@@ -21,7 +21,7 @@ export default function About () {
           />
         </div>
         <div className="col-7 px-5 mx-4 main_hero">
-              <div className="fs-3 px-3 text-2">Hi there, my name is</div>
+          <div className="fs-3 px-3 text-2">Hi there, my name is</div>
               <div className="text-1">Richard Hong / <span style={{ color: "#123C69"}}>홍정기</span></div>
               <div className="fs-4 px-3 text-2">
                 I am &nbsp;

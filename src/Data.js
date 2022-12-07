@@ -166,7 +166,7 @@ export const projects = [
     alt: "React Image",
     heading: "React Portfolio",
     github: "https://github.com/richardjhong/portfolio-v2",
-    deployed_site: "https://richardjhong.github.io/portfolio-v2/#about",
+    deployed_site: null,
     description: "This app (the very one that is being viewed now!) showcases use of React and its robust ecosystem to create an online interactive portfolio.",
     devicons: [
       {
