@@ -1,7 +1,7 @@
-import { SiJavascript, SiReact, SiExpress, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql, SiStyledcomponents, SiHeroku, SiGithub, SiMongodb } from "react-icons/si";
+import { SiJavascript, SiReact, SiExpress, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql, SiStyledcomponents, SiHeroku, SiGithub, SiMongodb, SiGreensock, SiApollographql } from "react-icons/si";
 import { GrCli } from "react-icons/gr";
 import { CgCPlusPlus } from "react-icons/cg";
-import { FaGithub, FaLinkedin, FaNode } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaNode, FaSass, FaChartBar } from "react-icons/fa";
 
 export const slider = [
   {
