@@ -90,6 +90,64 @@ export const slider = [
 
 export const projects = [
   {
+    image: "/assets/images/Migrate.png",
+    alt: "Migrate Image",
+    heading: "Migrate",
+    github: "https://github.com/richardjhong/migrate",
+    deployed_site: "https://migrate-abroad.herokuapp.com/",
+    description: "This app pulls aggregate information from the Social Progress Initiative to help people looking to become ex-patriots or live abroad make informed decisions with data visualizations and social commentary.",
+    devicons: [
+      {
+        icon: SiMongodb,
+        tooltipMessage: "MongoDB"
+      },
+      {
+        icon: SiExpress,
+        tooltipMessage: "Express"
+      },
+      {
+        icon: SiReact,
+        tooltipMessage: "React"
+      },
+      {
+        icon: FaNode,
+        tooltipMessage: "Node"
+      },
+      {
+        icon: SiJavascript,
+        tooltipMessage: "JavaScript"
+      },
+      {
+        icon: SiHtml5,
+        tooltipMessage: "HTML5"
+      },
+      {
+        icon: SiCss3,
+        tooltipMessage: "CSS3"
+      },
+      {
+        icon: SiGreensock,
+        tooltipMessage: "GreenSock"
+      },
+      {
+        icon: SiHeroku,
+        tooltipMessage: "Heroku"
+      },
+      {
+        icon: FaChartBar,
+        tooltipMessage: "Victory"
+      },
+      {
+        icon: SiApollographql,
+        tooltipMessage: "GraphQL"
+      },
+      {
+        icon: FaSass,
+        tooltipMessage: "Sass"
+      },
+    ]
+  },
+  {
     image: "/assets/images/Cat_Wonderland.png",
     alt: "Cat Wonderland Image",
     heading: "Cat Wonderland",
