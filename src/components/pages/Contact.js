@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { validateEmail } from '../../utils/helpers';
 import { GrInbox, GrSend } from "react-icons/gr";
 import { RiMailSendLine, RiErrorWarningLine } from "react-icons/ri";
 import { ToastContainer, toast } from 'react-toastify';
-import styled from 'styled-components';
+import emailjs from '@emailjs/browser';
 import avatar from '../../assets/images/contact_avatar.png'
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -12,6 +12,8 @@ export default function Contact() {
   const [email, setEmail] = useState('')  
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
+
+  const form = useRef()
 
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -23,11 +25,11 @@ export default function Contact() {
 
   const handleMouseLeave = (e) => {
     setIsHovering(false);
-    if (e.target.name === 'name' && name === '') {
+    if (e.target.name === 'from_name' && name === '') {
       setErrorMessage('Name field cannot be empty.')
     } 
 
-    if (e.target.name === 'email' && email === '') {
+    if (e.target.name === 'from_email' && email === '') {
       setErrorMessage('Email field cannot be empty.')
     } 
 
@@ -41,10 +43,10 @@ export default function Contact() {
     const inputType = target.name;
     const inputValue = target.value;
 
-    if (inputType === 'email') {
+    if (inputType === 'from_email') {
       setEmail(inputValue);
       email !== '' && setErrorMessage('Email field cannot be empty.')
-    } else if (inputType === 'name') {
+    } else if (inputType === 'from_name') {
       setName(inputValue);
       name !== '' && setErrorMessage('Name field cannot be empty.')
     } else {
@@ -57,12 +59,23 @@ export default function Contact() {
     e.preventDefault();
 
     !validateEmail(email) && setErrorMessage('Email is invalid.')
-    
 
     if (!validateEmail(email) || email === '' || name === '' || message === '') {
       showToastMessage('fail')
       return;
     }
+
+    const service_id = "service_u8bt4c3"
+    const template_id = "template_tqobshn"
+    const PUBLIC_KEY = "wgE9EyYzAViNKfBeb"
+
+    // public key used
+    emailjs.sendForm(service_id, template_id, form.current, PUBLIC_KEY)
+    .then((result) => {
+      console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
 
     showToastMessage('success')
     setEmail('');
@@ -111,7 +124,7 @@ export default function Contact() {
           <img src={avatar} alt={"contact_avatar"}height={500}/>
         </div>
         <div className="col-6" >
-          <form id="contact-form">
+          <form id="contact-form" ref={form} onSubmit={handleFormSubmit}>
             <div className="form-group" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
                 <label className="contact-label" htmlFor="name">
                   { name !== '' ? <p>Name {'\u2705'}</p> : <p>Name</p>}
@@ -119,7 +132,7 @@ export default function Contact() {
                 <input
                   className="form-control"
                   value={name}
-                  name="name"
+                  name="from_name"
                   onChange={handleInputChange}
                   type="name"
                   placeholder="Name"
@@ -132,7 +145,7 @@ export default function Contact() {
                 <input
                   className="form-control"
                   value={email}
-                  name="email"
+                  name="from_email"
                   onChange={handleInputChange}
                   type="email"
                   placeholder="Email"
