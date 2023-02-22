@@ -1,4 +1,4 @@
-import { SiJavascript, SiReact, SiExpress, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql, SiStyledcomponents, SiHeroku, SiGithub, SiMongodb, SiGreensock, SiApollographql } from "react-icons/si";
+import { SiJavascript, SiReact, SiExpress, SiSequelize, SiJquery, SiHandlebarsdotjs, SiHtml5, SiCss3, SiSpotify, SiJest, SiBootstrap, SiMysql, SiStyledcomponents, SiHeroku, SiGithub, SiMongodb, SiGreensock, SiApollographql, SiTypescript } from "react-icons/si";
 import { GrCli } from "react-icons/gr";
 import { CgCPlusPlus } from "react-icons/cg";
 import { FaGithub, FaLinkedin, FaNode, FaSass, FaChartBar } from "react-icons/fa";
@@ -12,6 +12,26 @@ export const slider = [
         icon: SiJavascript,
         tooltipMessage: "JavaScript"
       }
+    ]
+  },
+  {
+    text: "TypeScript",
+    width: "60%",
+    devicons: [
+      {
+        icon: SiTypescript,
+        tooltipMessage: "TypeScript"
+      }
+    ]
+  },
+  {
+    text: "C++",
+    width: "60%",
+    devicons: [
+      {
+        icon: CgCPlusPlus,
+        tooltipMessage: "C++"
+      },
     ]
   },
   {
@@ -75,17 +95,7 @@ export const slider = [
         tooltipMessage: "Sequelize"
       }
     ]
-  },
-  {
-    text: "C++",
-    width: "60%",
-    devicons: [
-      {
-        icon: CgCPlusPlus,
-        tooltipMessage: "C++"
-      },
-    ]
-  },
+  }
 ];
 
 export const projects = [
